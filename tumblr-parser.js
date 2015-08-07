@@ -72,8 +72,8 @@ function getPosts() {
 			
 		case "conversation":
 			var postTitle = '';
-			if (post['regular-title'] != null) {
-				postTitle = '<h3>' + post['regular-title'] + '</h3>';
+			if (post['conversation-title'] != null) {
+				postTitle = '<h3>' + post['conversation-title'] + '</h3>';
 			}
 			content = postTitle + post['conversation-text'];
 			icon = 'icon-quote-right';
