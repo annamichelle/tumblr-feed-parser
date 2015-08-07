@@ -12,17 +12,10 @@ function getPosts() {
 	$.getJSON(tumblr_feed, function(data) {
 		getPosts(data.posts);
 	});
-	
-	var l=json.length;
-	
-	// Limit number of displayed posts
-	if(l>5) {
-		l=5;
-	}
 
 	// HELPERS
 	function getPosts(json) {
-		for( var i=0; i<l; i++ ) {
+		for( var i=0, l=json.length; i<l; i++ ) {
 			formatPost(json[i]);
 		}
 	}
