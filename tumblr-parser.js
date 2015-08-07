@@ -65,6 +65,11 @@ function getPosts() {
 			content = post['audio-player'] + '<span class="song-caption">' + post['audio-caption'] + '</span>';
 			icon    = 'icon-music';
 			break;
+			
+		case "conversation":
+			content = '<h3>' + post['conversation-title'] + '</h3>' + post['conversation-text'];
+			icon = 'icon-quote-right';
+			break;
 		}
 
 		// Send it to the view
