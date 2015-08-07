@@ -30,7 +30,11 @@ function getPosts() {
 		{
 		// Normal post
 		case "regular":
-			content = '<h3>' + post['regular-title'] + '</h3>' + post['regular-body'];
+			var postTitle = '';
+			if (post['regular-title'] != null) {
+				postTitle = '<h3>' + post['regular-title'] + '</h3>';
+			}
+			content = postTitle + post['regular-body'];
 			icon    = 'icon-align-left';
 			break;
 
@@ -64,6 +68,15 @@ function getPosts() {
 		case "audio":
 			content = post['audio-player'] + '<span class="song-caption">' + post['audio-caption'] + '</span>';
 			icon    = 'icon-music';
+			break;
+			
+		case "conversation":
+			var postTitle = '';
+			if (post['conversation-title'] != null) {
+				postTitle = '<h3>' + post['conversation-title'] + '</h3>';
+			}
+			content = postTitle + post['conversation-text'];
+			icon = 'icon-quote-right';
 			break;
 		}
 
