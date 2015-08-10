@@ -81,7 +81,7 @@ function getPosts() {
 		}
 
 		// Send it to the view
-		$('#tumblr-feed').append('<div class="post"><span class="post-date">' + date + '</span><span class="icon ' + icon + '"></span><div class="content">' + content + '</div></div>');
+		$('#tumblr-feed').append('<div class="post"><span class="post-date">' + date + '</span><div class="content">' + content + '</div></div>');
 
 
 		// Remove duplicate dates
