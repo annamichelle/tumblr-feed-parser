@@ -9,14 +9,18 @@
 }
 
 #tumblr-feed{
-	padding: 20px;
+	padding: 10px;
 	background-color: #E0E0E0;
+	max-height: 600px;
+	overflow-y: scroll;
+	border: 2px solid #CCC;
 }
 
 .post {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 10px;
 	background-color: #FFFFFF;
+	border-radius: 5px;
 }
 
 .post img {
