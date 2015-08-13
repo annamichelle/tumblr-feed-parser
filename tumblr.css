@@ -1,16 +1,8 @@
-.container{
-	max-width: 300px;
-	min-width: 200px;
-	float: left;
-}
-
-.container h2{
-	text-align: center;
-}
-
 #tumblr-feed{
 	padding: 10px;
 	background-color: #E0E0E0;
+	max-width: 300px;
+	min-width: 200px;
 	max-height: 600px;
 	overflow-y: scroll;
 	border: 2px solid #CCC;
