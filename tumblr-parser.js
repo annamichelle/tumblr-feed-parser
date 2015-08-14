@@ -21,7 +21,7 @@ function getPosts() {
 	}
 
 	function formatPost(post) {
-		date    = moment.unix(post['unix-timestamp']).format('MMMM Do YYYY');
+		date    = moment.unix(post['unix-timestamp']).format('dddd, MMMM Do, YYYY');
 		content = post['regular-body'];
 		type    = post.type;
 
