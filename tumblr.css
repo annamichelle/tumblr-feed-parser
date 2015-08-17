@@ -44,11 +44,12 @@
 	font-style: italic;
 }
 
-.post-date {
+.post-date a {
 	display: block;
 	font-size: 16px;
 	color: #7A7A7A;
 	margin-bottom: 10px;
+	text-decoration: underline dotted;
 }
 
 .post .content .link-text {
