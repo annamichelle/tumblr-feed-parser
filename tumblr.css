@@ -51,14 +51,14 @@
 	margin-bottom: 10px;
 }
 
-.link-text {
+.post .content .link-text {
 	display: block;
 	padding: 5px;
 	text-align: center;
 	background-color: #8e1111;
 }
 
-.link-text a {
+.post .content .link-text a {
 	color: #FFF;
 	text-decoration: none;
 	font-weight: bold;
