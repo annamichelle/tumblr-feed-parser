@@ -54,8 +54,8 @@ function getPosts() {
 
 		// Photo post
 		case "photo":
-			content = '<div class="photo"><img src="' + post['photo-url-1280'] + 
-			          '" alt=""></div>' +
+			content = '<div class="photo"><a href="' + post['url'] + '" target="_blank"><img src="' + post['photo-url-1280'] + 
+			          '" alt=""></a></div>' +
 			          '<span class="photo-caption">' + post['photo-caption'] + '</span>';
 			icon    = 'icon-picture';
 			break;
