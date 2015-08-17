@@ -81,18 +81,6 @@ function getPosts() {
 		}
 
 		// Send it to the view
-		$('#tumblr-feed').append('<span class="post-date">' + date + '</span><div class="post"><div class="content">' + content + '</div></div>');
-
-
-		// Remove duplicate dates
-		// http://stackoverflow.com/a/2822974
-		var seen = {};
-		$('.post-date').each(function() {
-			var txt = $(this).text();
-			if (seen[txt])
-				$(this).hide().next('content').addClass('bordered');
-			else
-				seen[txt] = true;
-		});
+		$('#tumblr-feed').append('<div class="post"><span class="post-date"><a href="' + post['url'] + '" target="_blank">' + date + '</a></span><div class="content">' + content + '</div></div>');
 	}
 }
