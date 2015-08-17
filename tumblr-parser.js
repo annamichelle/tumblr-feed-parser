@@ -21,7 +21,7 @@ function getPosts() {
 	}
 
 	function formatPost(post) {
-		date    = moment.unix(post['unix-timestamp']).format('MMMM Do YYYY');
+		date    = moment.unix(post['unix-timestamp']).format('dddd, MMMM Do, YYYY');
 		content = post['regular-body'];
 		type    = post.type;
 
@@ -54,8 +54,8 @@ function getPosts() {
 
 		// Photo post
 		case "photo":
-			content = '<div class="photo"><img src="' + post['photo-url-1280'] + 
-			          '" alt=""></div>' +
+			content = '<div class="photo"><a href="' + post['url'] + '" target="_blank"><img src="' + post['photo-url-1280'] + 
+			          '" alt=""></a></div>' +
 			          '<span class="photo-caption">' + post['photo-caption'] + '</span>';
 			icon    = 'icon-picture';
 			break;
@@ -81,7 +81,7 @@ function getPosts() {
 		}
 
 		// Send it to the view
-		$('#main').append('<div class="post"><span class="post-date">' + date + '</span><i class="' + icon + '"></i><div class="content">' + content + '</div></div>');
+		$('#tumblr-feed').append('<span class="post-date">' + date + '</span><div class="post"><div class="content">' + content + '</div></div>');
 
 
 		// Remove duplicate dates

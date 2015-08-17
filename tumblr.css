@@ -1,36 +1,68 @@
+#tumblr-feed{
+	padding: 10px;
+	background-color: #E0E0E0;
+	max-width: 300px;
+	min-width: 200px;
+	max-height: 600px;
+	overflow-y: scroll;
+	border: 2px solid #CCC;
+}
+
 .post {
-	margin-bottom: 20px;
-}
-
-.post img {
-	width: 100%;
-}
-
-.post i {
-	font-size: 26px;
-	float: left;
-	display: block;
-	width: auto;
-}
-
-.post .content {
-	padding-left: 45px;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
 }
 
 .post h3 {
 	line-height: 100%;
 }
 
-.post-date {
-	display: block;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 16px;
-	margin-bottom: 15px;
+.post img {
+	width: 100%;
 }
 
-.post .photo {
-	border: 1px #eee solid;
+.post .content {
+	padding: 0;
+}
+
+.post .content p {
+	margin: 5px 0;
+}
+
+.post .content a {
+	text-decoration: underline dotted;
+	color: #333;
+}
+
+.post .content blockquote {
+	border-left: 3px solid #EEE;
+	margin: 1em 0px;
+	padding-left: 20px;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.post-date {
+	display: block;
+	font-size: 16px;
+	color: #7A7A7A;
+	margin-bottom: 10px;
+}
+
+.post .content .link-text {
+	display: block;
+	padding: 5px;
+	text-align: center;
+	background-color: #8e1111;
+}
+
+.post .content .link-text a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 .bordered {
