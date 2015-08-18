@@ -13,6 +13,7 @@
 	padding: 10px;
 	background-color: #FFFFFF;
 	border-radius: 5px;
+	font-size: 16px;
 }
 
 .post h3 {
@@ -44,11 +45,12 @@
 	font-style: italic;
 }
 
-.post-date {
+.post-date a {
 	display: block;
 	font-size: 16px;
-	color: #7A7A7A;
+	color: #333;
 	margin-bottom: 10px;
+	text-decoration: underline;
 }
 
 .post .content .link-text {
@@ -63,6 +65,16 @@
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 20px;
+}
+
+.tumblr-footer {
+	margin: 10px 0;
+}
+
+.tumblr-footer a {
+	color: #333;
+	font-style: italic;
+	text-decoration: none;
 }
 
 .bordered {

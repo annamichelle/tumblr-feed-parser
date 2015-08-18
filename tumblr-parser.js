@@ -7,7 +7,8 @@ function getPosts() {
 	// Change "blog_url" to pull in  a new feed. 
 
 	var blog_name   = 'demo',
-	    tumblr_feed = 'http://' + blog_name + '.tumblr.com/api/read/json?callback=?';
+	    tumblr_feed = 'http://' + blog_name + '.tumblr.com/api/read/json?callback=?',
+		tumblr_address = 'http://' + blog_name + '.tumblr.com';
 
 	$.getJSON(tumblr_feed, function(data) {
 		getPosts(data.posts);
@@ -15,13 +16,24 @@ function getPosts() {
 
 	// HELPERS
 	function getPosts(json) {
-		for( var i=0, l=json.length; i<l; i++ ) {
+		
+		// Limit number of posts shown
+		if(json.length>5){
+			l = 5;
+		}
+		else {
+			l = json.length;
+		}
+		for( var i=0; i<l; i++ ) {
 			formatPost(json[i]);
 		}
+		
+		// Add a link to your Tumblr at the end of posts
+		$('#tumblr-feed').append('<div class="tumblr-footer"><a href="' + tumblr_address +'">Read more posts on Tumblr &#8594;</a></div>');
 	}
 
 	function formatPost(post) {
-		date    = moment.unix(post['unix-timestamp']).format('dddd, MMMM Do, YYYY');
+		date    = moment.unix(post['unix-timestamp']).format('MMM Do, YYYY');
 		content = post['regular-body'];
 		type    = post.type;
 
@@ -81,18 +93,6 @@ function getPosts() {
 		}
 
 		// Send it to the view
-		$('#tumblr-feed').append('<span class="post-date">' + date + '</span><div class="post"><div class="content">' + content + '</div></div>');
-
-
-		// Remove duplicate dates
-		// http://stackoverflow.com/a/2822974
-		var seen = {};
-		$('.post-date').each(function() {
-			var txt = $(this).text();
-			if (seen[txt])
-				$(this).hide().next('content').addClass('bordered');
-			else
-				seen[txt] = true;
-		});
+		$('#tumblr-feed').append('<div class="post"><span class="post-date"><a href="' + post['url'] + '" target="_blank">' + date + '</a></span><div class="content">' + content + '</div></div>');
 	}
 }
