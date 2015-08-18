@@ -13,6 +13,7 @@
 	padding: 10px;
 	background-color: #FFFFFF;
 	border-radius: 5px;
+	font-size: 16px;
 }
 
 .post h3 {
@@ -47,9 +48,9 @@
 .post-date a {
 	display: block;
 	font-size: 16px;
-	color: #7A7A7A;
+	color: #333;
 	margin-bottom: 10px;
-	text-decoration: underline dotted;
+	text-decoration: underline;
 }
 
 .post .content .link-text {
