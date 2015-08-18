@@ -29,7 +29,7 @@ function getPosts() {
 		}
 		
 		// Add a link to your Tumblr at the end of posts
-		$('#tumblr-feed').append('<div class="tumblr-footer"><a href="' + tumblr_address +'">Read more posts on Tumblr</a></div>');
+		$('#tumblr-feed').append('<div class="tumblr-footer"><a href="' + tumblr_address +'">Read more posts on Tumblr &#8594;</a></div>');
 	}
 
 	function formatPost(post) {

@@ -67,6 +67,16 @@
 	font-size: 20px;
 }
 
+.tumblr-footer {
+	margin: 10px 0;
+}
+
+.tumblr-footer a {
+	color: #333;
+	font-style: italic;
+	text-decoration: none;
+}
+
 .bordered {
 	border-top: 1px #eee solid;
 	padding-top: 40px;
