@@ -30,6 +30,10 @@ function getPosts() {
 		
 		// Add a link to your Tumblr at the end of posts
 		$('#tumblr-feed').append('<div class="tumblr-footer"><a href="' + tumblr_address +'">Read more posts on Tumblr &#8594;</a></div>');
+		
+		// Set target of all links to _top (to open them outside of iFrame)
+		$('#tumblr-feed a').attr('target', '_top');
+	
 	}
 
 	function formatPost(post) {
@@ -95,8 +99,4 @@ function getPosts() {
 		// Send it to the view
 		$('#tumblr-feed').append('<div class="post"><span class="post-date"><a href="' + post['url'] + '">' + date + '</a></span><div class="content">' + content + '</div></div>');
 	}
-	
-	// Set target of all links to _top (to open them outside of iFrame)
-	$('#tumblr-feed a').attr('target', '_top');
-	
 }
