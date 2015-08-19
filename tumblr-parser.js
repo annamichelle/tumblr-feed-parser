@@ -53,7 +53,7 @@ function getPosts() {
 		// Link post
 		case "link":
 			content = '<span class="link-text"><a href="' + post['link-url'] + 
-			          '" target="_blank">' + post['link-text'] + '</a></span>' +
+			          '">' + post['link-text'] + '</a></span>' +
 			          '<span class="link-description"> ' + post['link-description'] + '</span>';
 			icon    = 'icon-link';
 			break;
@@ -66,7 +66,7 @@ function getPosts() {
 
 		// Photo post
 		case "photo":
-			content = '<div class="photo"><a href="' + post['url'] + '" target="_blank"><img src="' + post['photo-url-1280'] + 
+			content = '<div class="photo"><a href="' + post['url'] + '"><img src="' + post['photo-url-1280'] + 
 			          '" alt=""></a></div>' +
 			          '<span class="photo-caption">' + post['photo-caption'] + '</span>';
 			icon    = 'icon-picture';
@@ -93,6 +93,10 @@ function getPosts() {
 		}
 
 		// Send it to the view
-		$('#tumblr-feed').append('<div class="post"><span class="post-date"><a href="' + post['url'] + '" target="_blank">' + date + '</a></span><div class="content">' + content + '</div></div>');
+		$('#tumblr-feed').append('<div class="post"><span class="post-date"><a href="' + post['url'] + '">' + date + '</a></span><div class="content">' + content + '</div></div>');
 	}
+	
+	// Set target of all links to _top (to open them outside of iFrame)
+	$('#tumblr-feed a').attr('target', '_top');
+	
 }
