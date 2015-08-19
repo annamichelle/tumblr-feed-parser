@@ -6,7 +6,7 @@ function getPosts() {
 	// Post parser for Tumblr blogs.
 	// Change "blog_url" to pull in  a new feed. 
 
-	var blog_name   = 'demo',
+	var blog_name   = 'uwmspeccoll',
 	    tumblr_feed = 'http://' + blog_name + '.tumblr.com/api/read/json?callback=?',
 		tumblr_address = 'http://' + blog_name + '.tumblr.com';
 
